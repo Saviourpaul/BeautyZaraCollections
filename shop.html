@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Fashion | Beauty Zara Collections</title>
+  <meta name="description" content="Filter and shop Beauty Zara Collections products by gender, size, color, price, and category.">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+  <link href="assets/css/bzc-style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="topbar"><div class="container d-flex justify-content-between flex-wrap gap-2"><span>Beauty Zara Collections</span><span>Easy cart • WhatsApp checkout • Wholesale friendly</span></div></div>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index">Beauty Zara<span class="brand-dot">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" data-route="index.html" href="index">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-route="shop.html" href="shop">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" data-route="about.html" href="about">About</a></li>
+          <li class="nav-item"><a class="nav-link" data-route="contact.html" href="contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" data-route="terms.html" href="terms">Terms</a></li>
+          <li class="nav-item ms-lg-3"><button class="btn-icon" data-open-cart aria-label="Open cart"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i><span class="cart-count">0</span></button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="section-pad lazy-section">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">Product listing</p>
+        <h1>Shop Beauty Zara Collections</h1>
+        <p class="text-muted">Search, filter, sort, and build a retail or wholesale order in a few taps.</p>
+      </div>
+      <div class="shop-shell">
+        <aside class="filter-panel">
+          <h2 class="h5">Filters</h2>
+          <label class="form-label mt-3" for="productSearch">Search</label>
+          <input class="form-control shop-control" id="productSearch" placeholder="Search shirts, bags, dresses">
+          <label class="form-label mt-3" for="filterGender">Gender</label>
+          <select class="form-select shop-control" id="filterGender"><option value="">All</option><option>Women</option><option>Men</option><option>Unisex</option></select>
+          <label class="form-label mt-3" for="filterCategory">Category</label>
+          <select class="form-select shop-control" id="filterCategory"><option value="">All</option><option>Women Wears</option><option>Men Wears</option><option>Bags</option></select>
+          <label class="form-label mt-3" for="filterSize">Size</label>
+          <select class="form-select shop-control" id="filterSize"><option value="">All</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>One Size</option><option>Mini</option><option>Large</option></select>
+          <label class="form-label mt-3" for="filterColor">Color</label>
+          <select class="form-select shop-control" id="filterColor"><option value="">All</option><option>Black</option><option>White</option><option>Brown</option><option>Yellow</option><option>Red</option><option>Pink</option><option>Blue</option><option>Green</option><option>Beige</option></select>
+          <label class="form-label mt-3" for="filterPrice">Max price</label>
+          <select class="form-select shop-control" id="filterPrice"><option value="">Any</option><option value="10000">₦10,000</option><option value="15000">₦15,000</option><option value="20000">₦20,000</option><option value="25000">₦25,000</option></select>
+        </aside>
+        <section>
+          <div class="d-flex justify-content-between gap-3 align-items-center mb-3 flex-wrap">
+            <p class="mb-0 fw-bold" id="resultCount">Styles found</p>
+            <select class="form-select shop-control w-auto" id="sortProducts" aria-label="Sort products">
+              <option value="newest">Sort by newest</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+              <option value="popularity">Popularity</option>
+            </select>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+          <div class="text-center mt-4"><button class="btn btn-outline-dark" id="loadMore">Load more</button></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer" data-shared-footer></footer>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer"><div class="cart-head d-flex justify-content-between align-items-center"><h2 class="h4 mb-0">Your bag</h2><button class="btn btn-sm btn-outline-dark" data-close-cart>Close</button></div><div class="cart-items" id="cartItems"></div><div class="cart-foot"><div class="d-flex justify-content-between fw-bold mb-3"><span>Total</span><span class="cart-total">₦0</span></div><p class="small text-muted">Delivery estimate confirmed by location on WhatsApp.</p><a href="checkout" class="btn btn-dark w-100">Checkout</a></div></aside>
+  <a class="btn btn-gold whatsapp-float" href="https://wa.me/2349036925667" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bzc-products.js"></script>
+  <script src="assets/js/bzc-app.js"></script>
+</body>
+</html>
